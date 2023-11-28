@@ -22,7 +22,7 @@ void RoundRobin::Schedule()
 	Process aProcess = m_ExecutionQueue.front();
 	m_ExecutionQueue.pop_front();
 
-	UpdateSchedule(aProcess);
+	UpdateSchedule({ aProcess.pid, 1 });
 
 	m_CurrentUsedTime++;
 	aProcess.burstTime--;

@@ -149,6 +149,7 @@
     <ClCompile Include="src\SJF.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Gantt.h" />
     <ClInclude Include="src\RoundRobin.h" />
     <ClInclude Include="src\Scheduler.h" />
     <ClInclude Include="src\SJF.h" />

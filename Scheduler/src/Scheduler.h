@@ -34,13 +34,13 @@ public:
 	void UpdateSchedule(Process theProcess);
 	
 	
-	inline std::vector<uint32_t>& GetSchedule()
+	inline std::vector<Process>& _GetSchedule()
 	{
 		std::lock_guard<std::mutex> lockSchedule(m_MutexSchedule);
 		return m_Schedule;
 	}
 
-	std::vector<uint32_t> m_Schedule; // The order of execution of processes
+	std::vector<Process> m_Schedule; // The order of execution of processes
 	mutable std::mutex m_MutexSchedule;
 };
 

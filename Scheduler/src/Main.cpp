@@ -1,5 +1,6 @@
 #include "RoundRobin.h"
 #include "SJF.h"
+#include "Gantt.h"
 
 int main()
 {
@@ -30,4 +31,7 @@ int main()
 	}
 
 	client.join();
+	auto& aSchedule = server.GetSchedule();
+
+	DrawGantt(aSchedule);
 }
